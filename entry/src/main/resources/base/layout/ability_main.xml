@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    xmlns:app="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:background_element="#E1E1E1"
+    ohos:orientation="vertical">
+
+    <Text
+        ohos:id="$+id:text_helloworld"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="Smart Indicator"
+        ohos:text_size="50"
+        />
+
+
+    <heli.mrc.mylibrary.SmartIndicator
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        app:accentColor="#FFFF00"
+        app:textLightColor="#F0F0F0"
+        app:indicatorHeight="4vp"
+        ohos:background_element="#0080C0"
+        ohos:min_height="60vp"
+        ohos:top_margin="10vp"
+        >
+
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="APPLE"
+            ohos:text_size="16fp"
+            ohos:text_alignment="center"
+            ></Text>
+
+
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="PEAR"
+            ohos:text_size="16fp"
+            ohos:text_alignment="center"
+            ></Text>
+
+
+    </heli.mrc.mylibrary.SmartIndicator>
+
+    <heli.mrc.mylibrary.SmartIndicator
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        app:accentColor="#F0F0F0"
+        app:textLightColor="#ff212121"
+        ohos:background_element="#FF0000"
+        app:indicatorHeight="2.5vp"
+        ohos:min_height="60vp"
+        ohos:top_margin="10vp"
+        ohos:id="$+id:smartIndicator2"
+        >
+
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="OK"
+            ohos:text_size="16fp"
+            ohos:text_alignment="center"
+            ></Text>
+
+
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="NO"
+            ohos:text_size="16fp"
+            ohos:text_alignment="center"
+            ></Text>
+
+
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="None"
+            ohos:text_size="16fp"
+            ohos:text_alignment="center"
+            ></Text>
+
+    </heli.mrc.mylibrary.SmartIndicator>
+
+
+    <heli.mrc.mylibrary.SmartIndicator
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        app:textLightColor="#8080FF"
+        ohos:min_height="60vp"
+        ohos:top_margin="10vp"
+        >
+
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="提莫"
+            ohos:text_size="16fp"
+            ohos:text_alignment="center"
+            ></Text>
+
+
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="瑟提"
+            ohos:text_size="16fp"
+            ohos:text_alignment="center"
+            ></Text>
+
+
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="婕拉"
+            ohos:text_size="16fp"
+            ohos:text_alignment="center"
+            ></Text>
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="维鲁斯"
+            ohos:text_size="16fp"
+            ohos:text_alignment="center"
+            ></Text>
+
+    </heli.mrc.mylibrary.SmartIndicator>
+
+    <heli.mrc.mylibrary.SmartIndicator
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        app:accentColor="#FFFFFF"
+        app:textLightColor="#FFFF00"
+        ohos:min_height="100vp"
+        ohos:top_margin="20vp"
+        ohos:background_element="#008000"
+        >
+
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="钉钉"
+            ohos:text_size="16fp"
+            ohos:text_alignment="center"
+            ></Text>
+
+
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="微信"
+            ohos:text_size="16fp"
+            ohos:text_alignment="center"
+            ></Text>
+
+
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="陌陌"
+            ohos:text_size="16fp"
+            ohos:text_alignment="center"
+            ></Text>
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="QQ"
+            ohos:text_size="16fp"
+            ohos:text_alignment="center"
+            ></Text>
+        <Text
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="脉脉"
+            ohos:text_size="16fp"
+            ohos:text_alignment="center"
+            ></Text>
+
+    </heli.mrc.mylibrary.SmartIndicator>
+
+</DirectionalLayout>
