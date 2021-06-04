@@ -1,105 +1,84 @@
-ohos-segmented-control
+smart-text-indicator
 =========================
-ohos-Segmented is a custom component for ohos which is based on RadioGroup and RadioButton widget.
+smart-text-indicator a tool to add indicators for your textView;.
 
-![Sample Image](screenshoot/shoot1.png)
+![Sample Image](screenshot/device-2021-06-01-182819.png)
 
 ## Including in your project
 
-##### Add segmented_control to your project
+##### smart-text-indicator to your project
 
-    1.Copy the Ohos_segmented_control/library folder to the project directory
+    1.Copy the smart-text-indicator/library folder to the project directory
 
     2.Modify settings.gradle under the project and add the dependency on this module as follows:
 
-    include ':demo', ':library'
+    include ':demo', ':mylibrary'
 
-    3. Introduce the dependency of the module under the project. Taking the entry module as an example, you need to modify the build.gradle file under the entry module to add the dependency:
+    3. Introduce the dependency of the module under the project.  you need to modify the build.gradle file under the main module to add the dependency:
 
-    compile project(path: ':library') or implementation project(':library')
+   implementation project(path: ':mylibrary')
 
-    Solution 2: local use of har package integration
-    1. Compile this project, copy the har package generated in the build directory of the FlexLayout/library folder to the project lib folder:
-    directory：\Ohos_segmented_control\library\build\outputs\har\debug\library-debug.har
-
-    2. Add the following code in the entry's gradle
-    implementation fileTree(dir:'libs', include: ['*.jar','*.har'])
-
+    Solution 2: to be done ?
 
 More on the  configuration can be found in the Project.
 
 Usage
 -----
-Define in xml like as follow
+Define in xml like as follow 、just wrap your text with SmartIndicator.
 Sample code:
 ```xml
-        <info.hoang8f.ohos.library.SegmentedGroup
-            ohos:id="$+id:segmented4"
-            ohos:width="match_content"
-            ohos:height="80vp"
-            ohos:margin="10vp"
-            ohos:orientation="horizontal"
-            app:sc_border_width="1vp"
-            app:sc_corner_radius="5vp"
-            app:sc_tint_color="#F44336">
+          <heli.mrc.mylibrary.SmartIndicator
+              ohos:height="match_content"
+              ohos:width="match_parent"
+              app:accentColor="#FFFF00"
+              app:textLightColor="#F0F0F0"
+              app:indicatorHeight="4vp"
+              ohos:background_element="#0080C0"
+              ohos:min_height="60vp"
+              ohos:top_margin="10vp"
+              >
 
-            <info.hoang8f.ohos.library.AwesomeRadioButton
-                ohos:id="$+id:button41"
-                ohos:width="match_content"
-                ohos:height="match_content"
-                app:awesome_text="apple"
-                ohos:min_width="100vp"
-                ohos:text_size="13fp"
-                ohos:min_height="26vp"
-                ohos:text_alignment="center"
-                />
+              <Text
+                  ohos:height="match_content"
+                  ohos:width="match_content"
+                  ohos:text="APPLE"
+                  ohos:text_size="16fp"
+                  ohos:text_alignment="center"
+                  ></Text>
 
-            <info.hoang8f.ohos.library.AwesomeRadioButton
-                ohos:id="$+id:button42"
-                ohos:width="match_content"
-                ohos:height="match_content"
-                app:awesome_text="VS"
-                ohos:min_width="100vp"
-                ohos:text_size="13fp"
-                ohos:min_height="26vp"
-                ohos:text_alignment="center"
-                />
 
-            <info.hoang8f.ohos.library.AwesomeRadioButton
-                ohos:id="$+id:button43"
-                ohos:width="match_content"
-                ohos:text_alignment="center"
-                ohos:height="match_content"
-                app:awesome_text="google"
-                ohos:min_width="100vp"
-                ohos:text_size="13fp"
-                ohos:min_height="26vp"
+              <Text
+                  ohos:height="match_content"
+                  ohos:width="match_content"
+                  ohos:text="PEAR"
+                  ohos:text_size="16fp"
+                  ohos:text_alignment="center"
+                  ></Text>
 
-                />
-        </info.hoang8f.ohos.library.SegmentedGroup>
+
+          </heli.mrc.mylibrary.SmartIndicator>
 ```
 
-You also can be change the tint color and title color when button is checked by `setTintColor` method.
+You  can also  change the accent_Color and textLightColor  properties by `setAccentColor` and `setTextLightColor` method.
 Here is sample code:
 
 ```java
-SegmentedGroup segmented5 = (SegmentedGroup) findComponentById(ResourceTable.Id_segmented5);
-segmented5.setTintColor(Color.DKGRAY);
+        ((SmartIndicator)findComponentById(ResourceTable.Id_smartIndicator2)).setTextLightColor(Color.YELLOW.getValue());
+        ((SmartIndicator)findComponentById(ResourceTable.Id_smartIndicator2)).setAccentColor(Color.GREEN.getValue());
 ```
-If you dont specify border_width and/or corner_radius the default values will be used (1vp for border_width and 5 vp for corner_radius)
+If you dont specify indicatorHeight  the default values will be used
 
 Credits
 -------
 Author:
-* Le Van Hoang (@hoang8f)
-* Added support for vertical RadioGroup by [tchar](https://github.com/tchar).
-* Translate for openharmonyos by ..
+* heli Mrc
+
 
 License
 -------
     The MIT License (MIT)
 
-    Copyright (c) 2014 Le Van Hoang
+    Copyright (c) 2014 heli Mrc
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal

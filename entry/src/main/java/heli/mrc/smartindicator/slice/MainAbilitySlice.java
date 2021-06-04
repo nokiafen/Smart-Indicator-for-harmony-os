@@ -5,6 +5,7 @@ import heli.mrc.smartindicator.ResourceTable;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
 import ohos.agp.components.ComponentContainer;
+import ohos.agp.utils.Color;
 import ohos.agp.window.dialog.ToastDialog;
 
 public class MainAbilitySlice extends AbilitySlice {
@@ -18,6 +19,8 @@ public class MainAbilitySlice extends AbilitySlice {
                 new ToastDialog(getContext()).setText("component "+ index+ " checked ").show();
             }
         });
+        ((SmartIndicator)findComponentById(ResourceTable.Id_smartIndicator2)).setTextLightColor(Color.YELLOW.getValue());
+        ((SmartIndicator)findComponentById(ResourceTable.Id_smartIndicator2)).setAccentColor(Color.GREEN.getValue());
     }
 
     @Override
