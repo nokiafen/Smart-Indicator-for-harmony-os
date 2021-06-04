@@ -21,6 +21,7 @@ public class MainAbilitySlice extends AbilitySlice {
         });
         ((SmartIndicator)findComponentById(ResourceTable.Id_smartIndicator2)).setTextLightColor(Color.YELLOW.getValue());
         ((SmartIndicator)findComponentById(ResourceTable.Id_smartIndicator2)).setAccentColor(Color.GREEN.getValue());
+        ((SmartIndicator)findComponentById(ResourceTable.Id_smartIndicator2)).setSelection(2);
     }
 
     @Override

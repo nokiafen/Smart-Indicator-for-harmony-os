@@ -213,4 +213,12 @@ public class SmartIndicator extends DirectionalLayout implements Component.Touch
         invalidate();
     }
 
+    public void  setSelection(int index) {
+        if ((index<0||index>=getChildCount())) {
+            throw  new RuntimeException("index out of range, check your index");
+        }
+        pickedViewPosition = index;
+        invalidate();
+    }
+
 }
